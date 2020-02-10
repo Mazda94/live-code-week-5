@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     hooks: {
       beforeCreate: (User, opt) => {
         User.password = encryptPassword(User.password)
-        console.log(User.password)
       }
     }
     , sequelize

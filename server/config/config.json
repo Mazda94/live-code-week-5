@@ -1,16 +1,9 @@
 {
-  "development": {
-    "username": "xxxxx",
-    "password": "xxxxx",
-    "database": "p2_livecode_1",
-    "host": "localhost",
+  "production": {
+    "username": "hengeecqxdmllb",
+    "password": "2995c94a65a9aca483144e70e5644f377148da3301a205fc849cf7355376a2ca",
+    "database": "d8a8t309k6f227",
+    "host": "ec2-184-72-236-3.compute-1.amazonaws.com",
     "dialect": "postgres"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
   }
 }

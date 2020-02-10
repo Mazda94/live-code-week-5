@@ -1,145 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Comic Agung</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
-    <div class="container" id="app">
-      <!-- Logout button and notification for success / error event -->
-      <div class="row my-3">
-        <button id="btn-logout" class="btn btn-primary ml-auto">Logout</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Comic Agung</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
 
-      <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-        Your notification goes here
-      </div>
+<body>
+  <div class="container">
+    <!-- Logout button and notification for success / error event -->
+    <div class="row my-3">
+      <button id="btn-logout" class="btn btn-primary ml-auto">Logout</button>
+    </div>
 
-      <!-- This is Login Form  -->
-      <div>
-        <h1>Login</h1>
-        <form class="my-4">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              id="email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              name="password"
-              id="password"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Submit
-          </button>
-          <button type="submit" class="btn btn-info">
-            Register
-          </button>
-        </form>
-      </div>
+    <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+      Your notification goes here
+    </div>
 
-      <div>
-        <h1>Register</h1>
-        <form class="my-4">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="name"
-              class="form-control"
-              name="name"
-              id="name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              id="email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              name="password"
-              id="password"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Submit
-          </button>
-          <button type="submit" class="btn btn-warning">
-            Random User
-          </button>
-          <button type="submit" class="btn btn-info">
-            Login
-          </button>
-        </form>
-      <ist -->
-      <div>
-        <h1>Comic Collection</h1>
-        <div class="row my-4">
-          <!-- Each of comic will have one of this card -->
-          <div class="col-4 mb-4">
-            <div class="card text-center">
-              <img
-                src="https://www.idwpublishing.com/wp-content/uploads/2018/10/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yNDAvNzQ0L29yaWdpbmFsL1NwaWRlcm1hbjAxX2N2ckEuanBn.jpeg"
-                class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">The Amazing Spiderman - new Avengers</h5>
-                <p class="card-text">Author: J Michael S</p>
-                <button class="btn btn-primary">Edit</button>
-              </div>
-            </div>
-          </div>
+    <!-- This is Login Form  -->
+    <div id="login_page">
+      <h1>Login</h1>
+      <form class="my-4" id="login_form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="login_email" required />
         </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="login_password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+        <button class="btn btn-info" id="register_link">
+          Register
+        </button>
+      </form>
+    </div>
 
-      <!-- This is form page to update a comic -->
-      <div>
-        <h1>Update Comic</h1>
-        <form class="my-4">
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input id="title" type="text" class="form-control" name="title" />
-          </div>
-          <div class="form-group">
-            <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" />
-          </div>
-          <div class="form-group">
-            <label for="imageUrl">Comic Image URL</label>
-            <input type="text" class="form-control" name="imageUrl" />
-          </div>
-          <button id="btn-update" type="submit" class="btn btn-primary">
-            Submit
-          </button>
-        </form>
+    <div id="register_page">
+      <h1>Register</h1>
+      <form class="my-4" id="register_form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" class="form-control" name="name" id="register_name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="register_email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="register_password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+        <button type="submit" class="btn btn-warning">
+          Random User
+        </button>
+        <button class="btn btn-info" id="login_link">
+          Login
+        </button>
+      </form>
+    </div>
+
+
+    <div id="comic_list">
+      <h1>Comic Collection</h1>
+      <div class="row my-4" id="collection">
+        <!-- Each of comic will have one of this card -->
+
+      </div>
+    </div>
+
+    <!-- This is form page to update a comic -->
+    <div id="update_page">
+      <h1>Update Comic</h1>
+      <form class="my-4" id="update_form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input id="title-update" type="text" class="form-control" name="title" />
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input id="author-update" type="text" class="form-control" name="author" />
+        </div>
+        <div class="form-group">
+          <label for="imageUrl">Comic Image URL</label>
+          <input id="img-update" type="text" class="form-control" name="imageUrl" />
+        </div>
+        <button id="btn-update" type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
       </di>
     </div>
-  </body>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
 </html>
