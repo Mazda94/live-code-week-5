@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "xxxxxxx",
-    "password": null,
+    "username": "xxxxx",
+    "password": "xxxxx",
     "database": "p2_livecode_1",
     "host": "localhost",
     "dialect": "postgres"
